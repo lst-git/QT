@@ -26,11 +26,11 @@ dns:
 
 Proxy:
  #V2ray 系列
-- { name: "张01", type: vmess, server: 103.117.103.26, port: 25671, uuid: aaf41c17-90b7-40f5-f979-31c1cde33c24, alterId: 64, cipher: Auto }
-- { name: "刘02", type: vmess, server: 103.117.103.26, port: 26556, uuid: 617a92db-0a4b-43a7-959e-f9f687dbc3a6, alterId: 64, cipher: Auto }
-- { name: "申03", type: vmess, server: 103.117.103.26, port: 32327, uuid: 8e10faf2-9e26-444b-f2bf-f896fb77028e, alterId: 64, cipher: Auto }
-- { name: "孙04", type: vmess, server: 103.117.103.26, port: 15095, uuid: e06e05b6-e7a2-43d2-8f71-fbf1b691813e, alterId: 64, cipher: Auto }
-- { name: "王05", type: vmess, server: 103.117.103.26, port: 59755, uuid: 8964a9a6-19f7-4682-91b2-3ff8f4f5f17c, alterId: 64, cipher: Auto }
+- { name: "张鑫", type: vmess, server: 103.117.103.26, port: 25671, uuid: aaf41c17-90b7-40f5-f979-31c1cde33c24, alterId: 64, cipher: Auto }
+- { name: "申凯", type: vmess, server: 103.117.103.26, port: 26556, uuid: 617a92db-0a4b-43a7-959e-f9f687dbc3a6, alterId: 64, cipher: Auto }
+- { name: "小米笔记", type: vmess, server: 103.117.103.26, port: 32327, uuid: 8e10faf2-9e26-444b-f2bf-f896fb77028e, alterId: 64, cipher: Auto }
+- { name: "王敏PC", type: vmess, server: 103.117.103.26, port: 15095, uuid: e06e05b6-e7a2-43d2-8f71-fbf1b691813e, alterId: 64, cipher: Auto }
+- { name: "王敏MI", type: vmess, server: 103.117.103.26, port: 59755, uuid: 8964a9a6-19f7-4682-91b2-3ff8f4f5f17c, alterId: 64, cipher: Auto }
 
  #SS 系列
 - name: "SS_LST_QT04"
@@ -46,7 +46,7 @@ Proxy Group:
 # load-balance 可以使相同 eTLD 请求在同一条代理线路上   負載均衡
 # select 用来允许用户手动选择 代理服务器 或 服务器组
 
-- { name: "Proxy", type: select, proxies: ["张01", "刘02", "申03",  "孙04",  "王05"]}
+- { name: "Proxy", type: select, proxies: ["张鑫", "申凯", "小米笔记",  "王敏PC",  "王敏MI"]}
 - { name: "Netflix", type: select, proxies: ["Proxy"] }
 - { name: "FinalProxy", type: select, proxies: [ "Proxy", "DIRECT"] }
 
