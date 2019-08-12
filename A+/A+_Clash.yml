@@ -33,12 +33,12 @@ Proxy:
 - { name: "王敏MI", type: vmess, server: 103.117.103.26, port: 59755, uuid: 8964a9a6-19f7-4682-91b2-3ff8f4f5f17c, alterId: 64, cipher: Auto }
 
  #SS 系列
-- name: "SS_LST_QT04"
+- name: "SS_LST_A+"
   type: ss
-  server: 103.135.250.75
-  port: 22598
+  server: 103.117.103.26
+  port: 37853
   cipher: chacha20-ietf-poly1305
-  password: "LTfyMQqhg2"
+  password: "m8jxA4tr0k"
 
 Proxy Group:
 # url-test 可以自动选择与指定 URL 测速后，延迟最短的服务器
@@ -46,7 +46,7 @@ Proxy Group:
 # load-balance 可以使相同 eTLD 请求在同一条代理线路上   負載均衡
 # select 用来允许用户手动选择 代理服务器 或 服务器组
 
-- { name: "Proxy", type: select, proxies: ["张鑫", "申凯", "小米笔记",  "王敏PC",  "王敏MI"]}
+- { name: "Proxy", type: select, proxies: ["张鑫", "申凯", "小米笔记",  "王敏PC",  "王敏MI",  "SS_LST_A+"]}
 - { name: "Netflix", type: select, proxies: ["Proxy"] }
 - { name: "FinalProxy", type: select, proxies: [ "Proxy", "DIRECT"] }
 
