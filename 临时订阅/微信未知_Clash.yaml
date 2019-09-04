@@ -1,7 +1,7 @@
 #	 VX/QQ  358553526
 #	  自己搭建安全稳定
-#              {2019/08/27} LST规则
-#              {H_Mac}   客户专用
+#    {2019/08/27} LST规则
+#    {VX-Vellin-0903/1015}   客户专用
 #  如果看到当前文件/请不要修改 这需要一系列设置并导致出错
 #----------------------------------------#
 port: 7890
@@ -25,7 +25,7 @@ dns:
 
 Proxy:
 #V2ray 系列
-- { name: "∞", type: vmess, server: 103.117.101.186, port: 30292, uuid: 69b36e6e-3b2b-47f4-c476-d484c466dc1e, alterId: 64, cipher: auto }
+- { name: "Vellin", type: vmess, server: 103.117.101.186, port: 10575, uuid: 39aa666f-e697-4da3-921e-f4dac48a1d1b, alterId: 64, cipher: auto }
 
 Proxy Group:
 # url-test 可以自动选择与指定 URL 测速后，延迟最短的服务器
@@ -33,7 +33,7 @@ Proxy Group:
 # load-balance 可以使相同 eTLD 请求在同一条代理线路上   負載均衡
 # select 用来允许用户手动选择 代理服务器 或 服务器组
 
-- { name: "Proxy", type: select, proxies: ["∞", "DIRECT"], url: "http://www.gstatic.com/generate_204", interval: 300 }
+- { name: "Proxy", type: select, proxies: ["Vellin", "DIRECT"], url: "http://www.gstatic.com/generate_204", interval: 300 }
 
 #LST/VPN 自定义系列
  #DomainSuffix：域名后缀匹配
