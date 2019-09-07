@@ -1,31 +1,34 @@
 #	 VX/QQ  358553526
 #	  自己搭建安全稳定
 #    {2019/08/27} LST规则
-#    {VX-Vellin-0903/1015}   客户专用
+#    {0817/1017}   客户专用
 #  如果看到当前文件/请不要修改 这需要一系列设置并导致出错
 #----------------------------------------#
 port: 7890
 socks-port: 7891
 redir-port: 7892
-allow-lan: false
+allow-lan: true
 mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 secret: "lst"
 
+#experimental:
+#  send-through: 192.168.66.224:0
+
 dns:
   enable: true
-  ipv6: false
-  listen: 0.0.0.0:53
+  ipv6: true
+  listen: 127.0.0.1:53
   enhanced-mode: fake-ip
   nameserver:
+     - 114.114.114.114
      - 223.5.5.5
-     - 119.29.29.29	       
-     - 8.8.8.8
+     - 119.29.29.29
 
 Proxy:
 #V2ray 系列
-- { name: "Vellin", type: vmess, server: 103.117.101.186, port: 10575, uuid: 39aa666f-e697-4da3-921e-f4dac48a1d1b, alterId: 64, cipher: auto }
+- { name: "未知_VPN", type: vmess, server: 103.117.101.186, port: 59963, uuid: 49025a72-d347-442c-9cd9-c01ca583578b, alterId: 64, cipher: auto }
 
 Proxy Group:
 # url-test 可以自动选择与指定 URL 测速后，延迟最短的服务器
@@ -33,7 +36,7 @@ Proxy Group:
 # load-balance 可以使相同 eTLD 请求在同一条代理线路上   負載均衡
 # select 用来允许用户手动选择 代理服务器 或 服务器组
 
-- { name: "Proxy", type: select, proxies: ["Vellin", "DIRECT"], url: "http://www.gstatic.com/generate_204", interval: 300 }
+- { name: "Proxy", type: select, proxies: ["未知_VPN", "DIRECT"], url: "http://www.gstatic.com/generate_204", interval: 300 }
 
 #LST/VPN 自定义系列
  #DomainSuffix：域名后缀匹配
