@@ -1,7 +1,7 @@
 #	 VX/QQ  358553526
 #	  自己搭建安全稳定
 #    {2019/08/27} LST规则
-#    TB_我很假_0908-1009-PC
+#    YR_馮
 #  如果看到当前文件/请不要修改 这需要一系列设置并导致出错
 #----------------------------------------#
 port: 7890
@@ -28,7 +28,7 @@ dns:
 
 Proxy:
 #V2ray 系列
-- { name: "未知_VPN", type: vmess, server: 103.117.101.186, port: 41242, uuid: 06a7083e-bf02-4640-8e28-a7d1662a469d, alterId: 64, cipher: auto }
+- { name: "未知_VPN", type: vmess, server: 103.117.101.186, port: 30409, uuid: 42e33c30-3926-471c-94f3-d95ccfed7583, alterId: 64, cipher: auto }
 
 Proxy Group:
 # url-test 可以自动选择与指定 URL 测速后，延迟最短的服务器
