@@ -28,7 +28,7 @@ dns:
 
 Proxy:
 #V2ray 系列
-- { name: "未知_VPN", type: vmess, server: 103.117.101.186, port: 30409, uuid: 42e33c30-3926-471c-94f3-d95ccfed7583, alterId: 64, cipher: auto }
+- { name: "未知_VPN🇭🇰", type: vmess, server: 103.117.101.186, port: 30409, uuid: 42e33c30-3926-471c-94f3-d95ccfed7583, alterId: 64, cipher: auto }
 
 Proxy Group:
 # url-test 可以自动选择与指定 URL 测速后，延迟最短的服务器
@@ -36,7 +36,7 @@ Proxy Group:
 # load-balance 可以使相同 eTLD 请求在同一条代理线路上   負載均衡
 # select 用来允许用户手动选择 代理服务器 或 服务器组
 
-- { name: "Proxy", type: select, proxies: ["未知_VPN", "DIRECT"], url: "http://www.gstatic.com/generate_204", interval: 300 }
+- { name: "Proxy", type: select, proxies: ["未知_VPN🇭🇰", "DIRECT"], url: "http://www.gstatic.com/generate_204", interval: 300 }
 
 #LST/VPN 自定义系列
  #DomainSuffix：域名后缀匹配
