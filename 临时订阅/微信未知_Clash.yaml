@@ -31,14 +31,14 @@ Proxy:
 - { name: "未知_VPN🇭🇰", type: vmess, server: 103.117.103.26, port: 47172, uuid: e6eb48dc-a699-4e8c-fdb8-1a50c6fca21a, alterId: 64, cipher: auto }
 
  #SS 系列
-#- { name: "未知_VPN🇭🇰", type: ss, server: 103.117.101.186, port: 15628, cipher: chacha20-ietf-poly1305, password: "ytbnXYvt7o", udp: true }
+- { name: "未知_VPN🇺🇸", type: ss, server: 67.230.177.112, port: 29435, cipher: chacha20-ietf-poly1305, password: "XSzdZzqG8W", udp: true }
 Proxy Group:
 # url-test 可以自动选择与指定 URL 测速后，延迟最短的服务器
 # fallback 可以尽量按照用户书写的服务器顺序，在确保服务器可用的情况下，自动选择服务器
 # load-balance 可以使相同 eTLD 请求在同一条代理线路上   負載均衡
 # select 用来允许用户手动选择 代理服务器 或 服务器组
 
-- { name: "Proxy", type: select, proxies: ["未知_VPN🇭🇰", "DIRECT"], url: "http://www.gstatic.com/generate_204", interval: 300 }
+- { name: "Proxy", type: select, proxies: ["未知_VPN🇭🇰","未知_VPN🇺🇸" ,"DIRECT"], url: "http://www.gstatic.com/generate_204", interval: 300 }
 
 #LST/VPN 自定义系列
  #DomainSuffix：域名后缀匹配
