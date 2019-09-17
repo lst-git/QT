@@ -28,10 +28,10 @@ dns:
 
 Proxy:
 #V2ray 系列
-#- { name: "未知_VPN🇭🇰", type: vmess, server: 103.117.103.26, port: 47172, uuid: e6eb48dc-a699-4e8c-fdb8-1a50c6fca21a, alterId: 64, cipher: auto }
+- { name: "未知_VPN🇭🇰", type: vmess, server: 103.117.103.26, port: 47172, uuid: e6eb48dc-a699-4e8c-fdb8-1a50c6fca21a, alterId: 64, cipher: auto }
 
  #SS 系列
-- { name: "未知_VPN🇭🇰", type: ss, server: 103.117.101.186, port: 15628, cipher: chacha20-ietf-poly1305, password: "ytbnXYvt7o", udp: true }
+#- { name: "未知_VPN🇭🇰", type: ss, server: 103.117.101.186, port: 15628, cipher: chacha20-ietf-poly1305, password: "ytbnXYvt7o", udp: true }
 Proxy Group:
 # url-test 可以自动选择与指定 URL 测速后，延迟最短的服务器
 # fallback 可以尽量按照用户书写的服务器顺序，在确保服务器可用的情况下，自动选择服务器
