@@ -28,7 +28,7 @@ dns:
 
 Proxy:
 #V2ray 系列
-#- { name: "未知_VPN🇭🇰", type: vmess, server: 103.117.101.186, port: 30409, uuid: 42e33c30-3926-471c-94f3-d95ccfed7583, alterId: 64, cipher: auto }
+#- { name: "未知_VPN🇭🇰", type: vmess, server: 103.117.103.26, port: 47172, uuid: e6eb48dc-a699-4e8c-fdb8-1a50c6fca21a, alterId: 64, cipher: auto }
 
  #SS 系列
 - { name: "未知_VPN🇭🇰", type: ss, server: 103.117.101.186, port: 15628, cipher: chacha20-ietf-poly1305, password: "ytbnXYvt7o", udp: true }
