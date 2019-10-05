@@ -25,7 +25,7 @@ dns:
 
 Proxy:
 #V2ray 系列
-- { name: "私人专线_🇭🇰", type: vmess, server: 103.117.103.26, port: 47172, uuid: e6eb48dc-a699-4e8c-fdb8-1a50c6fca21a, alterId: 64, cipher: auto }
+- { name: "私人专线_🇭🇰", type: vmess, server: 193.110.201.156, port: 50044, uuid: d152ec6c-15f7-4e35-cd91-e81aa92cb178, alterId: 64, cipher: auto }
 - { name: "私人专线_🇺🇸", type: vmess, server: 205.210.165.189, port: 28444, uuid: 5eea6a77-e264-45d4-f58d-d29cb6f209ee, alterId: 64, cipher: Auto }
 Proxy Group:
 # url-test 可以自动选择与指定 URL 测速后，延迟最短的服务器
