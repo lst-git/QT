@@ -25,16 +25,17 @@ dns:
 
 Proxy:
 #V2ray 系列
-- { name: "V2_私人专线_🇭🇰", type: vmess, server: 103.117.103.26, port: 47172, uuid: e6eb48dc-a699-4e8c-fdb8-1a50c6fca21a, alterId: 64, cipher: auto }
-- { name: "V2_LST_BWG_🇺🇸", type: vmess, server: 67.230.177.112, port: 19177, uuid: 438e707e-702d-461e-b908-e0ac7cf9c744, alterId: 64, cipher: Auto }
+- { name: "私人专线_🇭🇰", type: vmess, server: 103.117.103.26, port: 47172, uuid: e6eb48dc-a699-4e8c-fdb8-1a50c6fca21a, alterId: 64, cipher: auto }
+- { name: "私人专线_🇺🇸", type: vmess, server: 205.210.165.189, port: 28444, uuid: 5eea6a77-e264-45d4-f58d-d29cb6f209ee, alterId: 64, cipher: Auto }
 Proxy Group:
 # url-test 可以自动选择与指定 URL 测速后，延迟最短的服务器
 # fallback 可以尽量按照用户书写的服务器顺序，在确保服务器可用的情况下，自动选择服务器
 # load-balance 可以使相同 eTLD 请求在同一条代理线路上   負載均衡
 # select 用来允许用户手动选择 代理服务器 或 服务器组
 
-- { name: "Proxy", type: load-balance, proxies: ["V2_私人专线_🇭🇰", "V2_LST_BWG_🇺🇸"], url: "http://www.gstatic.com/generate_204", interval: 300 }
-- { name: "IP_Manual", type: select, proxies: ["V2_私人专线_🇭🇰", "V2_LST_BWG_🇺🇸"] }
+- { name: "Proxy", type: select, proxies: ["Auto", "私人专线_🇭🇰", "私人专线_🇭🇰"]
+- { name: "IP_Manual", type: select, proxies: ["私人专线_🇭🇰", "私人专线_🇺🇸"] }
+- { name: "Auto",type: load-balance, proxies: ["私人专线_🇺🇸", "私人专线_🇭🇰"], url: "http://www.gstatic.com/generate_204", interval: 300 }
 
 #LST/VPN 自定义系列
  #DomainSuffix：域名后缀匹配
@@ -46,23 +47,23 @@ Proxy Group:
 Rule:
 
 # Apple
-- DOMAIN,evintl-ocsp.verisign.com,Proxy
-- DOMAIN,evsecure-ocsp.verisign.com,Proxy
-- DOMAIN-SUFFIX,appleiphonecell.com,Proxy
-- DOMAIN-SUFFIX,appsto.re,Proxy
-- DOMAIN-SUFFIX,aaplimg.com,Proxy
-- DOMAIN-SUFFIX,akadns.net,Proxy
-- DOMAIN-SUFFIX,apple.cn,Proxy
-- DOMAIN-SUFFIX,apple.co,Proxy
-- DOMAIN-SUFFIX,apple.com,Proxy
-- DOMAIN-SUFFIX,cdn-apple.com,Proxy
-- DOMAIN-SUFFIX,icloud.com,Proxy
-- DOMAIN-SUFFIX,icloud-content.com,Proxy
-- DOMAIN-SUFFIX,itunes.com,Proxy
-- DOMAIN-SUFFIX,me.com,Proxy
-- DOMAIN-SUFFIX,mzstatic.com,Proxy
-- DOMAIN-SUFFIX,symcb.com,Proxy
-- DOMAIN-SUFFIX,symcd.com,Proxy
+- DOMAIN,evintl-ocsp.verisign.com,DIRECT
+- DOMAIN,evsecure-ocsp.verisign.com,DIRECT
+- DOMAIN-SUFFIX,appleiphonecell.com,DIRECT
+- DOMAIN-SUFFIX,appsto.re,DIRECT
+- DOMAIN-SUFFIX,aaplimg.com,DIRECT
+- DOMAIN-SUFFIX,akadns.net,DIRECT
+- DOMAIN-SUFFIX,apple.cn,DIRECT
+- DOMAIN-SUFFIX,apple.co,DIRECT
+- DOMAIN-SUFFIX,apple.com,DIRECT
+- DOMAIN-SUFFIX,cdn-apple.com,DIRECT
+- DOMAIN-SUFFIX,icloud.com,DIRECT
+- DOMAIN-SUFFIX,icloud-content.com,DIRECT
+- DOMAIN-SUFFIX,itunes.com,DIRECT
+- DOMAIN-SUFFIX,me.com,DIRECT
+- DOMAIN-SUFFIX,mzstatic.com,DIRECT
+- DOMAIN-SUFFIX,symcb.com,DIRECT
+- DOMAIN-SUFFIX,symcd.com,DIRECT
 
 # direct
 #国内常见域名
