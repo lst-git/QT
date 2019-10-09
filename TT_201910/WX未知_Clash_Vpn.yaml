@@ -1,8 +1,9 @@
 #	 VX/QQ  358553526
-#	  自己搭建安全稳定
-#              {2019/08/27} LST规则
-#              {未知}   客户专用
+#	 自己搭建安全稳定
+#  {2019/08/27} LST规则
+#  {未知}   客户专用
 #  如果看到当前文件/请不要修改 这需要一系列设置并导致出错
+#  修改于 2019.10.9
 #----------------------------------------#
 port: 7890
 socks-port: 7891
@@ -14,12 +15,10 @@ external-controller: 127.0.0.1:9090
 secret: "lst"
 
 dns:
-  enable: False
-  ipv6: False
-  listen: 127.0.0.1:53
+  enable: true
+  listen: 0.0.0.0:53
   enhanced-mode: fake-ip
   nameserver:
-     - 114.114.114.114
      - 119.29.29.29
      - 223.5.5.5
 
@@ -35,7 +34,7 @@ Proxy Group:
 
 - { name: "Proxy", type: select, proxies: ["Auto_自动选择", "私人专线_🇺🇸", "私人专线_🇭🇰"]}
 - { name: "IP_Manual", type: select, proxies: ["私人专线_🇭🇰", "私人专线_🇺🇸"]}
-- { name: "Auto_自动选择",type: load-balance, proxies: ["私人专线_🇺🇸", "私人专线_🇭🇰"], url: "http://www.gstatic.com/generate_204", interval: 300 }
+- { name: "Auto_自动选择",type: fallback, proxies: ["私人专线_🇺🇸", "私人专线_🇭🇰"], url: "http://www.gstatic.com/generate_204", interval: 300 }
 
 #LST/VPN 自定义系列
  #DomainSuffix：域名后缀匹配
