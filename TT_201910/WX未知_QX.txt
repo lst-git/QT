@@ -37,14 +37,13 @@ server=/*.xiaomi.com/119.29.29.29
 
 #自定义订阅地址 SS SSR _设置
 [server_remote]
-;httXXXXXX.txt, tag=LST订阅, enabled=true
-ss://Y2hhY2hhMjAtcG9seTEzMDU6VVI1Nlk2WWFjT0AyMDUuMjEwLjE2NS4xODk6NTUzMTU=#%E7%A7%81%E4%BA%BA%E4%B8%93%E7%BA%BF_%F0%9F%87%BA%F0%9F%87%B8
-ss://Y2hhY2hhMjAtcG9seTEzMDU6cFFVNEZ6MFJJSkAxOTMuMTEwLjIwMS4xNTY6MjgyMzE=#%E7%A7%81%E4%BA%BA%E4%B8%93%E7%BA%BF_%F0%9F%87%AD%F0%9F%87%B0
+https://raw.githubusercontent.com/lushutao/QT/master/TT_201910/WX%E6%9C%AA%E7%9F%A5_QX_SS.txt, tag=学长VPN, enabled=true
 
 
 
 #手动写地址 SS SSR _设置
 [server_local]
+;shadowsocks=a.example.com:80, method=chacha20, password=pwd, obfs=http, obfs-host=bing.com, obfs-uri=/resource/file, fast-open=false, udp-relay=false, server_check_url=http://www.apple.com/generate_204, tag=Sample-A
 
 
 #自定义分流规则 订阅地址_设置
@@ -69,8 +68,8 @@ static=去广告, direct, REJECT, img-url= https://raw.githubusercontent.com/lus
 static=二维码,direct, img-url= https://raw.githubusercontent.com/lushutao/TB/master/QX/QX_TU/VX.png
 
 #自定义策略组_设置 static静态策略，available健康检查策略，round-robin负载均衡策略
-#static=手动选择, 私人专线_🇭🇰, 私人专线_🇺🇸,
-#available=自动选择, 私人专线_🇭🇰, 私人专线_🇺🇸,
+#static=手动选择, 私人专线_🇭🇰, 私人专线_🇺🇸
+#available=自动选择, 私人专线_🇭🇰, 私人专线_🇺🇸
 round-robin=负载均衡, 私人专线_🇭🇰, 私人专线_🇺🇸, img-url= https://raw.githubusercontent.com/lushutao/TB/master/QX/QX_TU/6.png
 #ssid=DDID, 手动选择, 二维码, YJ_VPN:自动选择, MI_Tao:负载均衡
 
