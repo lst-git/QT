@@ -49,6 +49,9 @@ Rule:
 - DOMAIN-SUFFIX,163.com, 解锁🎶
 - DOMAIN-SUFFIX,126.net, 解锁🎶
 - DOMAIN-SUFFIX,netease.com, 解锁🎶
+- IP-CIDR,59.111.128.0/17,解锁🎶
+- IP-CIDR,115.236.112.0/20,解锁🎶
+- IP-CIDR,223.252.192.0/19,解锁🎶
 
 # Internet Service Provider DIRECT 运营商劫持
 - DOMAIN-SUFFIX,17gouwuba.com,DIRECT
