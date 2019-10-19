@@ -27,22 +27,9 @@ Proxy:
 - { name: "学长私人专线", type: vmess, server: 193.110.201.156, port: 36978, uuid: 0094474a-9904-4539-af1d-d27d5dc68a20, alterId: 64, cipher: auto }
 
 Proxy Group:
-# url-test 可以自动选择与指定 URL 测速后，延迟最短的服务器
-# fallback 可以尽量按照用户书写的服务器顺序，在确保服务器可用的情况下，自动选择服务器
-# load-balance 可以使相同 eTLD 请求在同一条代理线路上   負載均衡
-# select 用来允许用户手动选择 代理服务器 或 服务器组
+- { name: "PROXY", type: select, proxies: ["学长私人专线"]}
 
-- { name: "PROXY", type: select, proxies: ["Auto_自动选择"]}
-- { name: "Auto_自动选择",type: fallback, proxies: ["学长私人专线" ], url: "http://www.gstatic.com/generate_204", interval: 300 }
-
-#LST/VPN 自定义系列
- #DomainSuffix：域名后缀匹配
- #Domain：域名匹配
- #DomainKeyword：域名关键字匹配
- #IPCIDR：IP段匹配
- #GEOIP：GEOIP数据库（国家代码）匹配
-
-
+Rule:
 
 # Internet Service Provider DIRECT 运营商劫持
 - DOMAIN-SUFFIX,17gouwuba.com,DIRECT
