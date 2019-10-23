@@ -24,7 +24,7 @@ dns:
 
 Proxy:
 #V2ray 系列
-- { name: "学长私人专线", type: vmess, server: 193.110.201.156, port: 36978, uuid: 0094474a-9904-4539-af1d-d27d5dc68a20, alterId: 64, cipher: auto }
+- { name: "学长私人专线", type: vmess, server: 67.230.177.112, port: 67.230.177.112, uuid: 21def5f3-4af7-470f-abaa-e4ed2d50d48e, alterId: 64, cipher: auto }
 
 Proxy Group:
 - { name: "PROXY", type: select, proxies: ["学长私人专线"]}
