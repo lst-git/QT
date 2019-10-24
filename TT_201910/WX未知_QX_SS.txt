@@ -1,2 +1,2 @@
-vmess=103.117.103.26:25671, method=chacha20-ietf-poly1305, password=aaf41c17-90b7-40f5-f979-31c1cde33c24, fast-open=false, udp-relay=false, tag=1-A+
-vmess=103.117.103.26:26556, method=chacha20-ietf-poly1305, password=617a92db-0a4b-43a7-959e-f9f687dbc3a6, fast-open=false, udp-relay=false, tag=2_A+
+vmess=193.110.201.156:50044, method=chacha20-ietf-poly1305, password=d152ec6c-15f7-4e35-cd91-e81aa92cb178, fast-open=false, udp-relay=false, tag=私人专线_🇭🇰
+vmess=205.210.165.189:28444, method=chacha20-ietf-poly1305, password=5eea6a77-e264-45d4-f58d-d29cb6f209ee, fast-open=false, udp-relay=false, tag=私人专线_🇺🇸
