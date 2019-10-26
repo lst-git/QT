@@ -1,3 +1,4 @@
 vmess=193.110.201.156:50044, method=chacha20-ietf-poly1305, password=d152ec6c-15f7-4e35-cd91-e81aa92cb178, fast-open=false, udp-relay=false, tag=私人专线_🇭🇰
 vmess=205.210.165.189:28444, method=chacha20-ietf-poly1305, password=5eea6a77-e264-45d4-f58d-d29cb6f209ee, fast-open=false, udp-relay=false, tag=私人专线_🇺🇸
 vmess=67.230.177.112:26956, method=chacha20-ietf-poly1305, password=cc4d6fc0-d7b8-4932-844a-8ce470ecfad8, fast-open=false, udp-relay=false, tag=BWG_🇺🇸
+http=205.210.165.189:6626, fast-open=false, udp-relay=false, tag=UnblockNeteaseMusic
