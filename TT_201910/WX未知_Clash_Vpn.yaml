@@ -53,6 +53,9 @@ Rule:
 - IP-CIDR,115.236.112.0/20,解锁🎶
 - IP-CIDR,223.252.192.0/19,解锁🎶
 
+#TT学长 定制
+- DOMAIN-SUFFIX,github.com,PROXY
+
 # Internet Service Provider DIRECT 运营商劫持
 - DOMAIN-SUFFIX,17gouwuba.com,DIRECT
 - DOMAIN-SUFFIX,186078.com,DIRECT
