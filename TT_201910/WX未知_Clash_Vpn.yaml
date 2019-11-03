@@ -35,7 +35,7 @@ Proxy Group:
 
 - { name: "Auto_自动选择",type: fallback, proxies: ["私人专线_🇺🇸", "私人专线_🇭🇰"], url: "http://www.gstatic.com/generate_204", interval: 300 }
 - { name: "PROXY", type: select, proxies: ["Auto_自动选择", "私人专线_🇺🇸", "私人专线_🇭🇰"]}
-- { name: "其他", type: select, proxies: ["Auto_自动选择", "DIRECT"]}
+- { name: "其他", type: select, proxies: ["DIRECT", "Auto_自动选择"]}
 - { name: "解锁🎶", type: select, proxies: ["UnblockNeteaseMusic", "DIRECT"]}
 
 
