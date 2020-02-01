@@ -25,8 +25,8 @@ dns:
 Proxy:
 #V2ray 系列
 - { name: "私人专线_🇭🇰20200129", type: vmess, server: 193.110.201.156, port: 50044, uuid: d152ec6c-15f7-4e35-cd91-e81aa92cb178, alterId: 64, cipher: auto }
-#- { name: "私人专线_🇺🇸", type: vmess, server: 205.210.165.189, port: 28444, uuid: 5eea6a77-e264-45d4-f58d-d29cb6f209ee, alterId: 64, cipher: Auto }
-- { name: "私人专线_🇺🇸20200129", type: ss, server: 154.17.2.103, port: 36089, cipher: aes-256-gcm, password: "0336s4XqRD", udp: true }
+- { name: "私人专线_🇺🇸20200129", type: vmess, server: 154.17.2.103, port: 28444, uuid: 5eea6a77-e264-45d4-f58d-d29cb6f209ee, alterId: 64, cipher: Auto }
+#- { name: "私人专线_🇺🇸20200129", type: ss, server: 154.17.2.103, port: 36089, cipher: aes-256-gcm, password: "0336s4XqRD", udp: true }
 - { name: "UnblockNeteaseMusic", type: http, server: 154.17.2.103, port: 6626}
 Proxy Group:
 # url-test 可以自动选择与指定 URL 测速后，延迟最短的服务器
