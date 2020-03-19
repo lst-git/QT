@@ -24,7 +24,7 @@ dns:
 
 Proxy:
 #V2ray 系列
-- { name: "私人专线_🇭🇰20200129", type: vmess, server: 193.110.201.156, port: 50044, uuid: d152ec6c-15f7-4e35-cd91-e81aa92cb178, alterId: 64, cipher: auto }
+- { name: "私人专线_🇭🇰20200319", type: vmess, server: 193.110.201.156, port: 11836, uuid: 874cd29c-3d18-44f8-9340-e2064237d99c, alterId: 18, cipher: auto }
 #- { name: "私人专线_🇺🇸", type: vmess, server: 205.210.165.189, port: 28444, uuid: 5eea6a77-e264-45d4-f58d-d29cb6f209ee, alterId: 64, cipher: Auto }
 - { name: "私人专线_🇺🇸20200129", type: vmess, server:  154.17.2.103, port: 28444, uuid: 5eea6a77-e264-45d4-f58d-d29cb6f209ee, alterId: 64, cipher: Auto }
 - { name: "私人专线_🇺🇸20200225", type: vmess, server: 67.230.177.112, port: 26956, uuid: cc4d6fc0-d7b8-4932-844a-8ce470ecfad8, alterId: 64, cipher: Auto }
@@ -35,8 +35,8 @@ Proxy Group:
 # load-balance 可以使相同 eTLD 请求在同一条代理线路上   負載均衡
 # select 用来允许用户手动选择 代理服务器 或 服务器组
 
-- { name: "Auto_自动选择",type: fallback, proxies: ["私人专线_🇺🇸20200129", "私人专线_🇭🇰20200129", "私人专线_🇺🇸20200225"], url: "http://www.gstatic.com/generate_204", interval: 300 }
-- { name: "PROXY", type: select, proxies: ["Auto_自动选择", "私人专线_🇺🇸20200129", "私人专线_🇭🇰20200129", "私人专线_🇺🇸20200225"]}
+- { name: "Auto_自动选择",type: fallback, proxies: ["私人专线_🇺🇸20200129", "私人专线_🇭🇰20200319", "私人专线_🇺🇸20200225"], url: "http://www.gstatic.com/generate_204", interval: 300 }
+- { name: "PROXY", type: select, proxies: ["Auto_自动选择", "私人专线_🇺🇸20200129", "私人专线_🇭🇰20200319", "私人专线_🇺🇸20200225"]}
 - { name: "其他", type: select, proxies: ["DIRECT", "Auto_自动选择"]}
 - { name: "解锁🎶", type: select, proxies: ["UnblockNeteaseMusic", "DIRECT"]}
 
