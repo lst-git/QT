@@ -1,0 +1,129 @@
+# 学长专线22.04\上半年 半年模式
+# https://gitee.com/TTLST/QT/blob/master/2021/2021-04/%E7%A7%81%E4%BA%BA%E4%B8%93%E7%BA%BF20210410.yml
+# https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif
+# https://lushutao.coding.net/p/coding-code-guide/d/DY/git/raw/master/QT/TT_Clash.bak
+
+#   
+#   {学长专线}   客户专用   
+#   如果看到当前文件/请不要修改 这需要一系列设置并导致出错
+#----------------------------------------#
+port: 7890
+socks-port: 7891
+redir-port: 7892
+allow-lan: false
+mode: Rule
+log-level: info
+external-controller: 127.0.0.1:9090
+secret: "lst"
+
+dns:
+  enable: true
+  listen: 0.0.0.0:53
+  enhanced-mode: redir-host
+  nameserver:
+     - 119.29.29.29
+     - 223.5.5.5
+     - 114.114.114.114
+     - 1.1.1.1
+     - 8.8.8.8
+
+proxies:
+#XXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX节点配置XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+#- { name: "学长专线🇺🇸_美国1", type: vmess, server: 136.175.178.139, port: 20227, uuid: 8c215efd-b762-4c34-fac5-709a0c7882e8, alterId: 66, cipher: auto }
+
+- { name: "学长专线🇭🇰_香港1", type: vmess, server: 193.110.201.156, port: 20226, uuid: 5c5cca22-d76f-411a-b778-0b0f3e0f4fdf, alterId: 66, cipher: auto }
+
+#- { name: "学长专线🇭🇰_香港2", type: ss, server: 193.110.201.244, port: 65221, cipher: chacha20-ietf-poly1305 , password: "mIl60HBdG3" }
+
+#- { name: "学长专线🇭🇰_香港2",type: trojan, server: tt2021q.top, port: 443, password: 202204-1015 }
+
+- { name: "学长专线🇭🇰_香港2", type: vmess, server: 193.110.203.99, port: 20226, uuid: dbefb03e-4fe9-405e-807e-8954dfa65932, alterId: 66, cipher: auto }
+
+- { name: "学长专线🇺🇸_美国1", type: vmess, server: 154.17.18.85, port: 20226, uuid: e34347d8-b029-4508-d8d5-c2093ea52ce2, alterId: 66, cipher: auto }
+
+#- { name: "学长专线🇺🇸_美国1",type: trojan, server: l2021a.top, port: 443, password: 202104-202110 }
+
+
+
+proxy-groups:
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX节点选择XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+# url-test 可以自动选择与指定 URL 测速后，延迟最短的服务器
+# fallback 可以尽量按照用户书写的服务器顺序，在确保服务器可用的情况下，自动选择服务器
+# load-balance 可以使相同 eTLD 请求在同一条代理线路上   負載均衡
+# select 用来允许用户手动选择 代理服务器 或 服务器组
+
+- { name: "🙅自动检测_多线路",type: load-balance, proxies: ["学长专线🇺🇸_美国1" ,"学长专线🇭🇰_香港1","学长专线🇭🇰_香港2"], url: "https://www.google.com.hk/", interval: 300 }
+- { name: "🙅自动检测_单线路",type: fallback, proxies: ["学长专线🇺🇸_美国1","学长专线🇭🇰_香港1","学长专线🇭🇰_香港2"], url: "https://www.google.com.hk/", interval: 300 }
+- { name: "🐹PROXY", type: select, proxies: ["🙅自动检测_单线路","🙅自动检测_多线路","学长专线🇺🇸_美国1","学长专线🇭🇰_香港1","学长专线🇭🇰_香港2"]}
+- { name: "🦋学长定制", type: select, proxies: ["🙅自动检测_单线路","🙅自动检测_多线路","学长专线🇺🇸_美国1","学长专线🇭🇰_香港1","学长专线🇭🇰_香港2"]}
+- { name: "🦨其他", type: select, proxies: ["🙅自动检测_多线路","DIRECT"]}
+
+
+#LST/VPN 自定义系列
+#DomainSuffix：域名后缀匹配
+#DOMAIN-KEYWORD：域名关键字匹配
+#Domain：域名匹配
+#IPCIDR：IP段匹配
+#GEOIP：GEOIP数据库（国家代码）匹配
+
+
+rule-providers:
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX规则远程更新XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+# name: # Provider 名称
+#   type: http # http 或 file
+#   behavior: classical # 或 ipcidr、domain
+#   path: # 文件路径
+#   url: # 只有当类型为 HTTP 时才可用，您不需要在本地空间中创建新文件。
+#   interval: # 自动更新间隔，仅在类型为 HTTP 时可用
+  XZ_Proxy:
+    type: http
+    behavior: classical
+    path: ./LST/XZ_Proxy.yaml
+    url: https://lushutao.coding.net/p/coding-code-guide/d/DY/git/raw/master/JS/XZ_Proxy.yaml
+    interval: 300
+    
+  GWF_TV:
+    type: http
+    behavior: classical
+    path: ./LST/XZ_GWF_TV.yaml
+    url: https://lushutao.coding.net/p/coding-code-guide/d/DY/git/raw/master/JS/Streaming.yaml
+    interval: 1800
+    
+  GWF:
+    type: http
+    behavior: classical
+    path: ./LST/XZ_GWF.yaml
+    url: https://lushutao.coding.net/p/coding-code-guide/d/DY/git/raw/master/JS/Global.yaml
+    interval: 1800
+    
+  China:
+    type: http
+    behavior: classical
+    path: ./LST/XZ_China.yaml
+    url: https://lushutao.coding.net/p/coding-code-guide/d/DY/git/raw/master/JS/China.yaml
+    interval: 3600
+ 
+  ChinaIP:
+    type: http
+    behavior: ipcidr
+    path: ./LST/XZ_ChinaIP.yaml
+    url: https://lushutao.coding.net/p/coding-code-guide/d/DY/git/raw/master/JS/ChinaIP.yaml
+    interval: 3600
+
+rules:
+ - MATCH,XZ_Proxy,🦋学长定制
+ - MATCH,GWF_TV,🐹PROXY
+ - MATCH,GWF,🐹PROXY
+ - MATCH,China,DIRECT
+ - MATCH,ChinaIP,DIRECT
+ - GEOIP,CN,DIRECT
+
+# Local Area Network
+ - IP-CIDR,192.168.0.0/16,DIRECT
+ - IP-CIDR,10.0.0.0/8,DIRECT
+ - IP-CIDR,172.16.0.0/12,DIRECT
+ - IP-CIDR,127.0.0.0/8,DIRECT
+ - IP-CIDR,100.64.0.0/10,DIRECT
+ - IP-CIDR,224.0.0.0/4,DIRECT
+
+ - MATCH,🦨其他
